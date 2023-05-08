@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+  <div class="login">
+    <h1>Employee Attrition Prediction</h1>
+
+    
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Satisfaction" placeholder="Satisfaction Level" required="required" />
+      <input type="text" name="Work_Accident" placeholder="Work Accident" required="required" />
+      <input type="text" name="timespent" placeholder="Time Spent in Company" required="required" />
+      
+      <p>Promotion in last 5 years:</p>
+      <input type="radio" id="yes" name="Promotion" value="YES">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="Promotion" value="NO">
+      <label for="no">No</label><br>
+      
+
+      
+      <p>Select your Department:</p>
+      <input type="radio" id="RandD" name="Department" value="RandD">
+      <label for="RandD">RandD</label>
+      <input type="radio" id="HR" name="Department" value="HR">
+      <label for="HR">HR</label>
+      <input type="radio" id="Mangagement" name="Department" value="Management">
+      <label for="Mangagement">Mangagement</label>
+      <input type="radio" id="Other" name="Department" value="Other">
+      <label for="Other">Other</label><br>
+
+      <p>Select your Salary:</p>
+      <input type="radio" id="low" name="Salary" value="low">
+      <label for="low">Low</label>
+      <input type="radio" id="medium" name="Salary" value="medium">
+      <label for="medium">Medium</label>
+      <input type="radio" id="high" name="Salary" value="high">
+      <label for="high">High</label><br>
+
+      
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    <div class="out">
+      {{ prediction_text }}
+    </div>
+  </div>
+
+
+</body>
+
+</html>

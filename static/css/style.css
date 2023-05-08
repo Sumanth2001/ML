@@ -1,0 +1,48 @@
+body{
+	background: linear-gradient(123deg, #71b8e7,#9b59b6);
+	height: 100vh;
+}
+
+button{
+	background-color: rgb(67, 29, 255);
+	padding: 15px;
+	width: 8rem;
+	border-radius: 10px;
+	margin: 1rem 30%;
+	color: white;
+	font-weight: bold;
+}
+
+input{
+	padding: 10px;
+	border-radius: 10px;
+	margin: 16px;
+	text-align: left;
+	
+}
+
+form{
+	background-color: rgb(255, 255, 255);
+	border-radius: 1rem;
+	padding: 1rem;
+	box-shadow: 2px 2px 2px;
+}
+
+.login{
+	max-width: 1180px;
+	margin: auto;
+	height: 400px;
+	width: 500px;
+	
+}
+
+.out{
+	color: white;
+	font-weight: bolder;
+	font-size: 1.5rem;
+}
+
+h1{
+	color: white;
+	font-weight: bold;
+}
